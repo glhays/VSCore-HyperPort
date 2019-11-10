@@ -1,0 +1,15 @@
+﻿@using HyperCore.WebUi.Infrastructure.AppSettingsModels
+@using Microsoft.Extensions.Options
+
+@inject IOptions<ScriptTags> OptionsScriptTags
+<!-- Open Graph data -->
+@if (!string.IsNullOrWhiteSpace(OptionsScriptTags.Value?.FacebookOpenGraph))
+{
+    <meta property="fb:app_id" content="@OptionsScriptTags.Value.FacebookOpenGraph">
+}
+<meta property="og:title" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="" />
+<meta property="og:image" content="" />
+<meta property="og:description" content="Start your development with a Bootstrap Dashboard built for Asp.net Core" />
+<meta property="og:site_name" content="DevSoft" />
